@@ -56,7 +56,8 @@ right-to-left sheets and full complex-script support. Part of
   save, though GridCraft still draws that text left to right. IME input goes
   through egui/winit. Korean typed over a selected cell on macOS composes from the first key
   (the grid allows the input method, and the in-cell editor takes the keys without cancelling
-  the composition); Chinese and Japanese, and other platforms, are unverified.
+  the composition); this is verified only with the separate storytold/winit#15 fix applied.
+  Chinese and Japanese, and other platforms, are unverified.
 - **Names in any script.** Defined names (Define Name, Create from Selection) are limited to
   255 characters, counted as characters rather than UTF-8 bytes, so a 255-letter Arabic name is
   accepted as in Excel. Sheet names already counted characters (31).
@@ -83,7 +84,7 @@ separators, number/date formats, machine translation with agent review, and scri
 | Japanese | ja | 268 (~12%) | no | CJK system-font fallback; the theme's East Asian typeface (`<a:ea>`) survives open + save (rendering does not use it yet); IME unverified; no furigana display | no | menus only | 8–12 h |
 | German | de | 266 (~12%) | no | Latin: yes | no | menus only | 4–8 h |
 | Italian | it | 971 (~44%) | dialogs, tooltips, pivot pane | Latin: yes | no | menus, File view, dialogs, pivot pane | 3–5 h |
-| Korean | ko | 266 (~12%) | no | Hangul via the CJK fallback; IME typing over a cell verified on macOS | no | menus only | 6–10 h |
+| Korean | ko | 266 (~12%) | no | Hangul via the CJK fallback; IME typing over a cell verified on macOS only with the storytold/winit#15 fix applied | no | menus only | 6–10 h |
 | Vietnamese | vi | 0 (0%) | no | Latin with stacked diacritics: unverified | no | none | 6–10 h |
 | Turkish | tr | 382 (~17%) | no | Latin: yes | yes | menus only | 4–8 h |
 
